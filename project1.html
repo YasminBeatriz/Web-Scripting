@@ -1,0 +1,154 @@
+<html>
+<head>
+	<title>Mexican Food</title>
+
+	<style type="text/css">
+
+	th
+	{
+		text-align: left;
+	}
+
+	body
+	{
+		font-family: , sans-serif;
+	}
+
+	</style>
+</head>
+<body>
+	<h3>Mexican Order Food Form</h3>
+
+	<strong>Beef-Filled Empanada</strong>
+	<form action = "formdata.cgi" method = "post">
+	
+		<table border = "1px" style = "width: 100%;">
+			<tr>
+				<th>Ground beef</th>
+				<th>Garlic</th>
+				<th>Onions</th>
+				<th>Peppers</th>
+				<th>Chili Seasoning</th>
+				<th>Anchovies</th>
+			</tr>
+			<tr>
+				<td>
+					&nbsp;
+				</td>
+				<td>
+					<input type = "checkbox" />
+				</td>
+				<td>
+					<input type = "checkbox" />
+				</td>
+				<td>
+					<input type = "checkbox" />
+				</td>
+				<td>
+					<input type = "checkbox" />
+				</td>
+				<td>
+					<input type = "checkbox" />
+				</td>
+			</tr>
+		</table>
+
+		<p>
+		<center>
+			Quantity: 
+			<input type = "text" value = "0">
+
+		</center>
+		</p>
+
+		<strong>Drink</strong>
+		<table border = "1px" style = "width: 100%;">
+			<tr>
+				<th>Pepsi</th>
+				<th>Canada Dry</th>
+				<th>Coke</th>
+				<th>Sprite</th>
+				<th>Mountain Dew</th>
+			</tr>
+			<tr>
+				<td>
+					<input type = "checkbox" name = "S" />S
+					<input type = "checkbox" name = "M" />M
+					<input type = "checkbox" name = "L" />L
+				</td>
+				<td>
+					<input type = "checkbox" name = "S" />S
+					<input type = "checkbox" name = "M" />M
+					<input type = "checkbox" name = "L" />L
+				</td>
+				<td>
+					<input type = "checkbox" name = "S" />S
+					<input type = "checkbox" name = "M" />M
+					<input type = "checkbox" name = "L" />L
+				</td>
+				<td>
+					<input type = "checkbox" name = "S" />S
+					<input type = "checkbox" name = "M" />M
+					<input type = "checkbox" name = "L" />L
+				</td>
+				<td>
+					<input type = "checkbox" name = "S" />S
+					<input type = "checkbox" name = "M" />M
+					<input type = "checkbox" name = "L" />L
+				</td>
+			</tr>
+		</table>
+
+		<p>
+		<center>
+			<table>
+				<tr>
+					<td># of small cup: </td>
+					<td><input type = "text" value = "0"></td>
+				</tr>
+				<tr>
+					<td># of medium cup: </td>
+					<td><input type = "text" value = "0"></td>
+				</tr>
+				<tr>
+					<td># of large cup: </td>
+					<td><input type = "text" value = "0"></td>
+				</tr>
+			</table>
+			
+		</center>
+		</p>
+	</form>
+
+	<hr>
+
+	&nbsp;
+	<br>
+	&nbsp;
+
+	<p>
+	<form>
+		<label>First Name </label> &nbsp;<input type = "text" name = "first_name"> <br>
+		<label>Middle Initial </label> &nbsp;<input type = "text" name = "middle"> <br>
+		<label>Last Name </label> &nbsp;<input type = "text" name = "last_names"> <br>
+		<label>Shipping Address </label> &nbsp;<input type = "text" name = "address" size = "80"> <label>City </label> &nbsp; <input type = "text" name = "city"> <br>
+		<label>State </label><input type = "text" name = "state"> <label>ZIP </label><input type = "text" name = "zip"> <label>Country </label><input type = "text" name = "zip">  <p>
+		<label>Credit Card</label> <br>
+		<input type = "radio" name = "card" />Visa <br>
+		<input type = "radio" name = "card" />Master Card <br>
+		<input type = "radio" name = "card" />American Express <br>
+		<input type = "radio" name = "card" />Discover <br>
+		<label>Credit Card number </label> <input type = "text" size = "30">
+
+	<p>
+	<center>
+		<input type = "submit" value = "Submit Order"> 
+	</center>
+
+	</form>
+
+	&nbsp;
+	<br>
+	&nbsp;
+</body>
+</html>

@@ -1,0 +1,60 @@
+<html>
+<head>
+	<title>Untitled</title>
+</head>
+
+<body>
+<script type="text/javascript">
+    var a = new Array();
+    function listIt()
+    {
+      var s = "";
+      for(i = 0; i < a.length; i++)
+        s = s + a[i] + "\n";
+      alert(s);
+    }
+
+    function add()
+    {
+        var myRegularExpression = new RegExp("(^$)");
+        var myTextField = document.getElementById("myText");
+
+        if(!myRegularExpression.test(myTextField.value))
+        {
+            a[a.length] = myTextField.value;
+            myTextField.value = "";
+        }
+        else
+            alert("You didn't type a name.");
+    }
+      
+    function find()
+    {
+        var myTextField = document.getElementById("myText");
+        var myRegularExpression = new RegExp("(^$)");
+
+        if(!myRegularExpression.test(myTextField.value))
+        {
+            var findRegularExp = new RegExp("(^" + myTextField.value + "$)");
+            for(var i = 0; i < a.length; i++)
+            {
+                if(findRegularExp.test(a[i]))
+                {
+                    alert("The name is on the list. Name: " + a[i])
+                    return;
+                }
+            }
+            alert("The name is not on the list.");
+        }
+        else
+            alert("You didn't type a name.");
+    }
+    </script>
+    
+    <input type="text" id="myText" /><br>
+    <input type="button" onclick="add()" value="Add a name" />
+    <input type="button" onclick="listIt()" value="List the names" />
+    <input type="button" onclick="find()" value="Find" />
+</body>
+</html>
+

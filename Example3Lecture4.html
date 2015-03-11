@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title>Example 3</title>
+</head>
+<body>
+
+
+	<form>
+
+		<label>m: </label>
+		<input type = "text" name = "m">
+		<p>
+		<label>n: </label>		
+		<input type = "text" name = "n">
+		<p>
+		<input type = "submit" onclick = "f(n)">
+
+
+	</form>
+
+	<script type="text/javascript">
+
+	function f(n)
+	{
+		var i, j;
+
+		for(i = n; i >= 0; i--)
+		{
+			for(j = i; j >= 0; j--)
+				document.write("*");
+			document.write("<br>");
+		}
+	}
+
+	var r = Math.round(1 + Math.random() * 9);
+	f(r);
+
+	</script>
+
+</body>
+</html>

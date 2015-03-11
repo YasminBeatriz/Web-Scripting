@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Project 4</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+
+    function f(n)
+    {
+        var result = 1;
+        var i;
+        for(i = 0; i < n; i++)
+        {
+            result = result * 2;
+        }
+        return result;
+    }
+
+    var n = Math.round(1 + Math.random() * 9);
+    document.write("The random number is " + n + "<br>");  
+    var result = f(n)
+    document.write("The result of 2 to the power of " + n + " is: " + result);
+
+    </script>
+
+</body>
+</html>

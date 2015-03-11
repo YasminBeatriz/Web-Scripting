@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title>Power</title>
+</head>
+<body>
+
+	<form>
+		<label>M (base) = </label>
+		<input type = "text" name = "basePower">
+		<p>
+		<label>N (exponent) = </label>
+		<input type = "text" name = "exponent">
+		<p>
+		<label>Result: </label>
+		<input type = "text" name = "result">
+		<p>
+		<input type = "button" value = "Calculation" onclick = "f()">
+	</form>
+
+	<script type="text/javascript">
+
+	function f()
+	{
+		var base, exp, power;
+
+		alert(basePower);
+
+
+		base = basePower.value;
+		exp = exponent.value;
+		power = Math.pow(base, exp);
+		
+		result.value = power;
+		//document.getElementById("result").innerHTML = power;
+	}
+
+
+	</script>
+
+</body>
+</html>

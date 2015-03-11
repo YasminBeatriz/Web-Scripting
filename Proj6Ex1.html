@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>Project 6 Exercise 1</title>
+</head>
+<body>
+	<form>
+		<label>IP address: </label> &nbsp;
+		<input id = "IP" type = "text">
+
+		<input type = "button" value = "Verify" onclick = "validate()">
+
+	</form>
+
+	<p id = "result"> </p>
+
+	<script type="text/javascript">
+
+		function validate()
+		{
+			var string = document.getElementById("IP").value;
+			
+			var myRegularExpression = new RegExp("(^|.* )([0-9]{3}\\.[0-9]{3}\\.[0-9]{1}\\.[0-9]{3})($| .*)");
+
+			if(myRegularExpression.test(string))
+				document.getElementById("result").innerHTML = "True";
+			else
+				document.getElementById("result").innerHTML = "False";
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>Exercise 5</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var names = new Array();
+        var passwords = new Array();
+
+        function register()
+        { 
+            //This function is complete. Do not change it.
+            var newName = document.getElementById("newName").value;
+            var newPassword = document.getElementById("newPassword").value;
+            var b = search(newName, newPassword);
+            if(b)
+                alert("You already have registered " + newName);
+            else
+            {
+                alert("Welcome "+ newName);
+                names[names.length] = newName;
+                passwords[passwords.length] = newPassword;
+            }
+        }
+
+        function login()
+        { 
+            var Name = document.getElementById("newName").value;
+            var Pass = document.getElementById("newPassword").value;
+            var i;
+
+            for(i = 0; i < names.length; i++)
+            {
+                if(names[i] == Name && passwords[i] == Pass)
+                {
+                    alert("Welcome back " + names[i] + ".");
+                    return;
+                }
+            }
+
+            alert("Please register first " + Name);
+        }
+
+
+        function search(newName, newPassword)
+        { 
+            var i;
+
+            for(i = 0; i < names.length; i++)
+                if(names[i] == newName && passwords[i] == newPassword)
+                    return true;
+
+            return false;
+            
+        }
+
+    </script>
+
+    Name:&emsp;&ensp;<input type = "text" id = "newName" size="25"><br>
+    Password:<input type = "password" id="newPassword" size="25"><br><br>
+    <input type = "submit" value = "Register" onclick = "register()">
+    <input type="submit" value="Login" onclick = "login()">
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<title>Exercise 3</title>
+<body>
+	<script type="text/javascript">
+	function find()
+	{
+		var num = Math.round(1 + Math.random() * 10);
+
+		document.write("<h2>The number generated is " + num + "</h2>");
+		var text = "";
+		var result = "";
+
+		var i;
+		for(i = 1; i <= num; i++)
+			if(i % 2)
+				text += i + " is odd\n";
+			else
+				text += i + " is even\n";
+		alert(text);
+	}
+	
+	</script>
+	<input type="submit" value="Submit" onclick = "find()">
+</body>
+</html>

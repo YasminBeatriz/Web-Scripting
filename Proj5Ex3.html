@@ -1,0 +1,81 @@
+<html>
+<head>
+	<title>Project 5 - Exercise 3</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+	function check()
+	{
+		var n = document.getElementById("name").value;
+		if(n.length == 0)
+			alert("Please enter your name");
+
+		/*if(document.myForm.name.value == "")
+		{
+			alert("Please enter your name");
+		}*/
+
+		var pass = document.getElementById("password").value;
+		if(pass.length == 0)
+			alert("Please enter your password");
+
+		var radio = document.getElementsByName("scale");
+		var selected = -1;
+
+		for(var i = 0; i < radio.length; i++)
+		{
+			if(radio[i].checked)
+				selected = 1;
+		}
+
+		if(selected == -1)
+			alert("Please check one of the radio buttons.");
+
+		var check = document.getElementsByName("game");
+		selected = -1;
+		i = 0;
+
+		for(i = 0; i < check.length; i++)
+		{
+			if(check[i].checked)
+				selected = 1;
+		}
+
+		if(selected == -1)
+			alert("Please check one of the check buttons.");
+
+
+	}
+	</script>
+
+	<form name = "myForm" method="post">
+		User<br>
+		<input type = "text" id = "name" name = "name" value = "" tabindex="3" size="30" maxlength="40" ><br><br>
+		Password<br>
+		<input type="password" name="password" id="password" size="30" />
+		<br><br><fieldset><legend>
+		Which word means a "period of 100 years"?<br>
+		</legend>
+
+		<p>
+
+		<input type="radio" name="scale" id="decade" value = "decade"> decade<br>
+		<input type="radio" name="scale" id="century" value = "century"> century<br>
+		<input type="radio" name="scale" id="millennium" value = "millennium"> millennium<br>
+		<input type="radio" name="scale" id="milligram" value = "milligram"> milligram<br>
+
+		</fieldset>
+
+		<br><br>
+		Favorite Games:<br>
+		<input type="checkbox" name="game" id = "Baseball" value="Baseball"/>Baseball
+		<input type="checkbox" name="game" id = "Tennis" value="Tennis"/>Tennis
+		<input type="checkbox" name="game" id = "Volleyball" value="Volleyball"/>Volleyball
+		<input type="checkbox" name="game" id = "Football" value="Football"/>Football<br><br>
+
+		<input type="submit" name="submit" id="submit" value="Submit" onclick = "check()"> 
+		<input type="reset" name="reset" id="reset" value="Reset"/>
+	</form>
+</body>
+</html>

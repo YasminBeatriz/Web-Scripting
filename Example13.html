@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Example 13</title>
+    </head>
+    <body>
+        <label for="textBox1">m</label>
+        <input type="text" name="textBox1" id="textBox1" size="20"><br>
+        <label for="textBox2">n</label>
+        <input type="text" name="textBox2" id="textBox2" size="20"><br>
+        <label for="textBox3">Result</label>
+        <input type="text" name="textBox3" id="textBox3" size="20" readonly><br>
+        <input type="button" value="Calc" onclick="f()">
+        <script type="text/javascript">
+            function f()
+            {
+                textBox3.value = Math.pow(textBox1.value, textBox2.value);
+            }
+        </script>
+    </body>
+</html>
